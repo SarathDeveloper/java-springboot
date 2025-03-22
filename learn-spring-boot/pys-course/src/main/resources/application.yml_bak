@@ -1,0 +1,29 @@
+server:
+  port: 80
+  context-path: /spring-boot-quick-start
+logging:
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: DEBUG
+        security: DEBUG
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+     ddl-auto:update
+    properties:
+     hibernate:
+      format_sql:true
+    
+  messages:
+    basename: i18n/messages, i18n/messages_zh
+  datasource:
+    url:jdbc:mysql://pysdb.cwysjpjcsdnj.ap-south-1.rds.amazonaws.com:3306/pys?useSSL=false
+    username:pickyourslot
+    password:pickyourslot  
+management:
+  security:
+    roles: ADMIN
+
